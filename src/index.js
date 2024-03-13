@@ -9,7 +9,7 @@ const { lightningChart, Themes } = lcjs
 
 const chart3D = lightningChart()
     .Chart3D({
-        theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,,
+        theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
     })
     .setTitle('Asteroid 3D Model')
 
