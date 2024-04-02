@@ -13,7 +13,7 @@ const chart3D = lightningChart()
     })
     .setTitle('Asteroid 3D Model')
 
-fetch(document.head.baseURI + 'examples/assets/1501/asteroid.obj')
+fetch(new URL(document.head.baseURI).origin + new URL(document.head.baseURI).pathname + 'examples/assets/1501/asteroid.obj')
     .then((response) => response.text())
     .then((data) => {
         console.log(data, 'data')
