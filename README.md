@@ -68,5 +68,5 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © LightningChart Ltd 2009-2022. All rights reserved.
 
 
-[Mesh Model]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/MeshModel3D.html
+[Mesh Model]: https://lightningchart.com/js-charts/api-documentation/v5.2.0/classes/MeshModel3D.html
 
