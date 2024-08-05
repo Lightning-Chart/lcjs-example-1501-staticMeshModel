@@ -2,7 +2,7 @@
  * Static 3D Mesh Model
  */
 
-const lcjs = require('@arction/lcjs')
+const lcjs = require('@lightningchart/lcjs')
 const obj = require('webgl-obj-loader')
 
 const { lightningChart, Themes } = lcjs
