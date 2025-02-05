@@ -29,16 +29,12 @@ const meshModel = chart3D.addMeshModel()
 
 To render a 3D mesh model on this chart, you need to prepare the necessary data, including vertices, indices, and optionally, normals. These data can come from any 3D modeling software, such as Blender or similar tools.
 
-In our examples, we consistently export 3D models to the .OBJ file format. To process this data into the required normals, vertices, and indices, we rely on the [webgl-obj-loader NPM library](https://www.npmjs.com/package/webgl-obj-loader) .
+In our examples, we consistently export 3D models to the .OBJ file format. To process this data into the required normals, vertices, and indices, we rely on built-in LightningChart JS model parsing.
 
-Once you've got your 3D model data ready in the correct format, you can easily render your model on the Mesh Model chart. This is done by using the '.setModelGeometry' function, as demonstrated in the following code:
+Once you've got your 3D model data ready in the correct format, you can easily render your model on the Mesh Model chart. This is done by using the '.setModelFromObj' function, as demonstrated in the following code:
 
 ```javascript
-meshModel.setModelGeometry({
-    vertices: modelParsed.vertices,
-    indices: modelParsed.indices,
-    normals: modelParsed.vertexNormals,
-})
+meshModel.setModelFromObj(objString)
 ```
 
 
@@ -68,5 +64,5 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © LightningChart Ltd 2009-2022. All rights reserved.
 
 
-[Mesh Model]: https://lightningchart.com/js-charts/api-documentation/v6.1.0/classes/MeshModel3D.html
+[Mesh Model]: https://lightningchart.com/js-charts/api-documentation/v7.0.1/classes/MeshModel3D.html
 

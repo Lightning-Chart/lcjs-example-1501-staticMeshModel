@@ -3,7 +3,6 @@
  */
 
 const lcjs = require('@lightningchart/lcjs')
-const obj = require('webgl-obj-loader')
 
 const { lightningChart, Themes } = lcjs
 
@@ -19,18 +18,5 @@ fetch(new URL(document.head.baseURI).origin + new URL(document.head.baseURI).pat
     .then((response) => response.text())
     .then((data) => {
         console.log(data, 'data')
-
-        const modelParsed = new obj.Mesh(data)
-        console.log(modelParsed, 'modelParsed')
-
-        const meshModel = chart3D
-            .addMeshModel()
-            .setScale(0.2)
-            .setModelRotation({ x: 45, y: 0, z: 0 })
-
-            .setModelGeometry({
-                vertices: modelParsed.vertices,
-                indices: modelParsed.indices,
-                normals: modelParsed.vertexNormals,
-            })
+        const meshModel = chart3D.addMeshModel().setScale(0.2).setModelRotationEuler({ x: 45, y: 0, z: 0 }).setModelFromObj(data)
     })
